@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css?family=Satisfy|Ubuntu&display=swap");
+$color_primary: #1089ff;
+
+$color_dark: #162447;
+
+$color_alpha: rgba(16, 137, 255, 0.8);
+
+body,
+html {
+  background: #fff;
+  font-family: "Ubuntu", sans-serif;
+  overflow: hidden;
+}
+
+.box-container {
+  height: 100vh;
+  display: flex;
+  overflow: hidden;
+  transition: all 1s ease-in-out;
+  justify-content: center;
+  align-items: center;
+  transform: scale(1);
+}
+.love-box {
+  cursor: pointer;
+  background-color: #fff;
+
+  width: 300px;
+  border-radius: 20px;
+  margin-left: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-right: auto;
+  padding: 40px 0px 40px 0px;
+  -webkit-box-shadow: 0px 0px 63px -6px $color_alpha;
+  -moz-box-shadow: 0px 0px 63px -6px $color_alpha;
+  box-shadow: 0px 0px 63px -6px $color_alpha;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.box-container.active {
+  opacity: 0 !important;
+  transform: scale(0) !important;
+  visibility: hidden !important;
+}
+
+.second-container {
+  background: #424874;
+  height: 100vh;
+  width: 0;
+  z-index: 10000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.5s ease-in;
+}
+
+.second-container.active {
+  width: 100vw;
+}
+
+#second-strings {
+  opacity: 0 !important;
+  visibility: hidden;
+}
+
+.text-initial {
+  color: #fff !important;
+}
