@@ -6,7 +6,7 @@ import "./App.scss";
 import Typed from "typed.js";
 
 import $ from "jquery";
-import { SecondStrings } from "./components/Strings";
+import { SecondStrings, InitialStrings } from "./components/Strings";
 import { Colors } from "./constants/Colors";
 
 class App extends Component {
@@ -53,13 +53,7 @@ class App extends Component {
 const BoxContainer = () => (
   <div className="box-container">
     <div className="text-center">
-      <div id="typed-strings">
-        <div className="text-initial">
-          Hey{" "}
-          <span style={{ color: Colors.primary, fontSize: 40 }}>Dear, </span>I
-          have to say something. Can you click this
-        </div>
-      </div>
+      <InitialStrings id="typed-strings" />
       <span
         className="text-center"
         style={{
